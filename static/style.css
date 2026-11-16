@@ -40,7 +40,7 @@ main { max-width: 900px; margin: 0 auto; }
     padding: 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-.contact-card.favorite { border-left: 4px solid #ffc107; }
+.contact-card.favorite { background: #fff8e1; border: 1px solid #ffc107; }
 .contact-header {
     display: flex;
     justify-content: space-between;
