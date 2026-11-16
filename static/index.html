@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📒 通讯录</h1>
+        <div class="toolbar">
+            <button id="add-btn" class="btn primary">+ 新建联系人</button>
+            <button id="export-btn" class="btn">导出 Excel</button>
+            <label class="btn">
+                导入 Excel
+                <input type="file" id="import-file" accept=".xlsx" hidden>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div id="contact-list" class="contact-list"></div>
+    </main>
+
+    <!-- 新建/编辑弹窗 -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">新建联系人</h2>
+            <label>姓名 <input type="text" id="input-name"></label>
+            <div id="methods-container">
+                <div class="method-row">
+                    <select class="method-type">
+                        <option value="phone">电话</option>
+                        <option value="email">邮箱</option>
+                        <option value="social">社交账号</option>
+                        <option value="address">地址</option>
+                    </select>
+                    <input type="text" class="method-value" placeholder="输入联系方式">
+                    <button class="btn small remove-method" type="button">×</button>
+                </div>
+            </div>
+            <button id="add-method" class="btn small" type="button">+ 添加一行联系方式</button>
+            <div class="modal-actions">
+                <button id="cancel-btn" class="btn">取消</button>
+                <button id="save-btn" class="btn primary">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
