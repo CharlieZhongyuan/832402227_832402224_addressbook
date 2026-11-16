@@ -50,7 +50,6 @@ async function deleteContact(id) {
     await fetch(`/api/contacts/${id}`, { method: "DELETE" });
     loadContacts();
 }
-
 function openModal(id) {
     editingId = id;
     document.getElementById("modal").classList.remove("hidden");
